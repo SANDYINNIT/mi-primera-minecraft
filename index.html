@@ -1,170 +1,122 @@
 <html>
 <head>
 <style>
-  
- /* Chat containers */
- .container {
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+  @import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+  body {
+  background-color: black;
+}
+body {
+	background-color:r;
+    }
+    h1{
+    	color: black;
+        font-family:Minecraft;
+    }
+    .container {
+  position: relative;
+  width: 50%;
 }
 
-/* Darker chat container */
-.darker {
-  border-color: #ccc;
-  background-color: #ddd;
-}
-
-/* Clear floats */
-.container::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Style images */
-.container img {
-  float: left;
-  max-width: 60px;
+.image {
+  display: block;
   width: 100%;
-  margin-right: 20px;
-  border-radius: 50%;
+  height: auto;
 }
 
-/* Style the right image */
-.container img.right {
-  float: right;
-  margin-left: 20px;
-  margin-right:0;
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color:black;
+  overflow: hidden;
+  width: 53%;
+  height: 0;
+  transition: .5s ease;
 }
 
-/* Style time text */
-.time-right {
-  float: right;
-  color: #aaa;
-}
-
-/* Style time text */
-.time-left {
-  float: left;
-  color: #999;
-} 
-
-{box-sizing: border-box;}
-
-/* Button used to open the chat form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
-
-/* The popup chat - hidden by default */
-.form-popup {
-  display: none;
-  position: fixed;
+.container:hover .overlay {
   bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+  height: 100%;
 }
 
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Full-width textarea */
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
-}
-
-/* When the textarea gets focus, do something */
-.form-container textarea:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #04AA6D;
+.text {
+  white-space: nowrap; 
   color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+body {
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.section {
+  position: relative;
+  max-width: 920px;
+  min-height: 75vh;
+  padding: 40px;
+  margin: auto;
+  background-color: #48c9b0;
+  color: #ffffff;
+}
+
+.section.bg-static {
+  background-color: #85c1e9;
+  background-image: url(https://www.svepstudios.se/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsvep%2F47f88d05-c7a4-41d0-99ca-05ce87b63b5c_minecraft-dungeons-cinematic_1920x1080_work_06.jpg%3Fauto%3Dcompress%2Cformat&w=1920&q=90);
+  background-size: cover;
+  background-position: center;
+}
+.section .bg-move {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: auto;
   width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+  background-image: url(https://img.itch.zone/aW1hZ2UvMTMxMTU1Mi83NjMzMDQ3LmdpZg==/347x500m/LM4r3t.gif);
+  background-size: cover;
+  background-position: center;
+}
+.move-up-down {
+position: relative;
+
+animation-name: move;
+
+animation-duration: 2s;
+
+animation-direction: alternate;
+
+animation-timing-function: ease-in-out;
+
+animation-iteration-count: infinite;
+}
+@keyframes move {
+
+from {top: 0px;}
+
+to {top: 50px;}
 }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-} 
 </style>
 <script>
 </script>
 <title>I LIKE MINECRAFT</title>
 
 </head>
+<marquee direction="right"
+  behavior="alternate">
+  <h1 style="background-color:white;">I LIKE MINECRAFTT</h1>
+</marquee>
 
-<div class="container">
-  <img src="/w3images/bandmember.jpg" alt="Avatar">
-  <p>Hello. How are you today?</p>
-  <span class="time-right">11:00</span>
-</div>
+<img src="https://www.svepstudios.se/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsvep%2F47f88d05-c7a4-41d0-99ca-05ce87b63b5c_minecraft-dungeons-cinematic_1920x1080_work_06.jpg%3Fauto%3Dcompress%2Cformat&w=1920&q=90" 
+width="1000" height="700" class="move-up-down">
+  <div style="width:99%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/2PWBLDJ2KtB1X6o9vY" width="95%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
-<div class="container darker">
-  <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
-  <p>Hey! I'm fine. Thanks for asking!</p>
-  <span class="time-left">11:01</span>
-</div>
-
-<div class="container">
-  <img src="/w3images/bandmember.jpg" alt="Avatar">
-  <p>Sweet! So, what do you wanna do today?</p>
-  <span class="time-right">11:02</span>
-</div>
-
-<div class="container darker">
-  <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="right">
-  <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-  <span class="time-left">11:05</span>
-</div> 
-
-<div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Chat</h1>
-
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
-
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div> 
 
 
 </body>
